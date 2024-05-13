@@ -9,7 +9,9 @@ export default defineConfig({
       devtools({
         autoname: true, // e.g. enable autoname
       }),
-      solid({ adapter: netlify() }),
+      solid({
+        adapter: netlify({ edge: true }),
+      }),
     ],
   },
 });
