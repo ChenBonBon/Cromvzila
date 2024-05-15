@@ -2,6 +2,7 @@ import { loadOml2d } from "oh-my-live2d";
 import { onCleanup } from "solid-js";
 
 const oml2d = loadOml2d({
+  dockedPosition: "right",
   mobileDisplay: true,
   models: [
     {
@@ -19,14 +20,6 @@ const oml2d = loadOml2d({
       },
     },
   ],
-});
-
-oml2d.onStageSlideIn(() => {
-  oml2d.tipsMessage(
-    `欢迎使用 OhMyLive2D, <br/>当前版本: ${oml2d.version}`,
-    4000,
-    10
-  );
 });
 
 export default function L2DComponent() {

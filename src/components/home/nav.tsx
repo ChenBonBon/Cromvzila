@@ -1,13 +1,7 @@
 import clsx from "clsx";
 import { createSignal } from "solid-js";
 
-interface ClueCardProps {
-  onClick?: () => void;
-}
-
-export default function ClueCard(props: ClueCardProps) {
-  const { onClick } = props;
-
+export default function Nav() {
   const [hovered, setHovered] = createSignal(false);
 
   function handleMouseEnter() {
@@ -17,21 +11,19 @@ export default function ClueCard(props: ClueCardProps) {
   function handleMouseOut() {
     setHovered(false);
   }
-
   return (
     <img
-      src="/images/home-file.png"
-      alt="/images/home-file.png"
+      src="/images/home-nav.png"
+      alt="/images/home-nav.png"
       class={clsx(
-        "absolute w-1/5 right-1/4 z-30 bottom-0 -rotate-12 cursor-pointer transition-transform duration-300 ease-linear",
+        "absolute top-0 left-0 h-1/2 z-30 transition-transform duration-300 ease-linear",
         {
           ["translate-y-0"]: hovered(),
-          ["translate-y-3/4"]: !hovered(),
+          ["-translate-y-3/4"]: !hovered(),
         }
       )}
       onMouseEnter={handleMouseEnter}
       onMouseOut={handleMouseOut}
-      onClick={onClick}
     />
   );
 }

@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "bio-backend": "url(/images/bio-backend.png)",
+      },
       animation: {
         dot: "dot 1.5s infinite",
       },
