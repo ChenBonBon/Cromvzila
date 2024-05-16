@@ -24,7 +24,7 @@ export default function Backend() {
   }
 
   return (
-    <MainLayout backgroundImage="/images/home/backend.png">
+    <MainLayout backgroundImage="/images/home/backend.webp">
       <Nav />
       <Frontend />
       <Wall />

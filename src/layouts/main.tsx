@@ -27,11 +27,11 @@ export default function MainLayout(props: BackendProps) {
   onMount(() => {
     conputeSize();
 
-    window && window.addEventListener("resize", conputeSize);
+    window.addEventListener("resize", conputeSize);
   });
 
   onCleanup(() => {
-    window && window.removeEventListener("resize", conputeSize);
+    window.removeEventListener("resize", conputeSize);
   });
 
   return (

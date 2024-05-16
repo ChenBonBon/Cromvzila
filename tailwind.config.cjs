@@ -6,9 +6,6 @@ module.exports = {
       fontFamily: {
         chat: "SimHei, Microsoft JhengHei, STHeiti, LiHei Pro Medium",
       },
-      backgroundImage: {
-        "prison-backend": "url(/images/prison/backend.png)",
-      },
       animation: {
         dot: "dot 1.5s infinite",
       },

@@ -2,8 +2,8 @@ export default function Wall() {
   return (
     <div class="absolute right-0 top-0 h-full z-20">
       <img
-        src="/images/home/wall.png"
-        alt="/images/home/wall.png"
+        src="/images/home/wall.webp"
+        alt="/images/home/wall.webp"
         class="w-auto h-full"
       />
       <img

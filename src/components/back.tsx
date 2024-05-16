@@ -7,7 +7,7 @@ interface BackProps {
 export default function Back(props: BackProps) {
   return (
     <A href="/" class={props.className}>
-      <img src="/images/back.png" alt="/images/back.png" />
+      <img src="/images/back.webp" alt="/images/back.webp" />
     </A>
   );
 }

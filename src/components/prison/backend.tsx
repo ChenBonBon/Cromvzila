@@ -35,7 +35,7 @@ export default function Backend() {
   });
 
   return (
-    <MainLayout backgroundImage="/images/prison/backend.png">
+    <MainLayout backgroundImage="/images/prison/backend.webp">
       <Show when={chating() && !finished()}>
         <Chat message={MESSAGES[count()]} />
       </Show>

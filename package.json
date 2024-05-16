@@ -1,5 +1,5 @@
 {
-  "name": "example-with-tailwindcss",
+  "name": "cromvzila",
   "type": "module",
   "scripts": {
     "dev": "vinxi dev -- --host",

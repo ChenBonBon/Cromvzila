@@ -63,8 +63,8 @@ export default function Bio(props: BioProps) {
       ref={(el) => (containerRef = el)}
     >
       <img
-        src="/images/bio/backend.png"
-        alt="/images/bio/backend.png"
+        src="/images/bio/backend.webp"
+        alt="/images/bio/backend.webp"
         class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-full"
         ref={(el) => (backendRef = el)}
         onLoad={(event) => {
@@ -78,8 +78,8 @@ export default function Bio(props: BioProps) {
         }}
       />
       <img
-        src="/images/bio/photo.png"
-        alt="/images/bio/photo.png"
+        src="/images/bio/photo.webp"
+        alt="/images/bio/photo.webp"
         class="absolute h-1/2"
         style={{
           left:
@@ -90,8 +90,8 @@ export default function Bio(props: BioProps) {
         }}
       />
       <img
-        src="/images/bio/mark.png"
-        alt="/images/bio/mark.png"
+        src="/images/bio/mark.webp"
+        alt="/images/bio/mark.webp"
         class="absolute h-1/5 cursor-pointer"
         style={{
           right:
