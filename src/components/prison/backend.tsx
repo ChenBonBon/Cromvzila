@@ -1,5 +1,5 @@
 import { clientOnly } from "@solidjs/start";
-import { Show, createMemo, createSignal } from "solid-js";
+import { Show, createMemo, createSignal, onMount } from "solid-js";
 import { MESSAGES } from "~/constants/Messages";
 import Back from "../back";
 import Chat from "./chat";
@@ -11,6 +11,9 @@ const MainLayout = clientOnly(() => import("../../layouts/main"));
 export default function Backend() {
   const [times, setTimes] = createSignal(0);
   const [chating, setChating] = createSignal(false);
+  const [zimiMessage, setZimiMessage] = createSignal(
+    "MeowWoo, I'll say anything."
+  );
 
   const finished = createMemo(() => {
     return times() === MESSAGES.length;
@@ -25,13 +28,19 @@ export default function Backend() {
     }, 3500);
   }
 
+  onMount(() => {
+    setTimeout(() => {
+      setZimiMessage("……………………");
+    }, 3500);
+  });
+
   return (
     <MainLayout backgroundImage="/images/prison/backend.png">
       <Show when={chating() && !finished()}>
         <Chat message={MESSAGES[times()]} />
       </Show>
       <Show when={!chating() && !finished()}>
-        <Zimi onClick={quest} />
+        <Zimi message={zimiMessage()} onClick={quest} />
       </Show>
       <Show when={finished()}>
         <Crashed />
