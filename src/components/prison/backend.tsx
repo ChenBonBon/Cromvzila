@@ -9,18 +9,18 @@ import Zimi from "./zimi";
 const MainLayout = clientOnly(() => import("../../layouts/main"));
 
 export default function Backend() {
-  const [times, setTimes] = createSignal(0);
+  const [count, setCount] = createSignal(-1);
   const [chating, setChating] = createSignal(false);
   const [zimiMessage, setZimiMessage] = createSignal(
     "MeowWoo, I'll say anything."
   );
 
   const finished = createMemo(() => {
-    return times() === MESSAGES.length;
+    return count() === MESSAGES.length;
   });
 
   function quest() {
-    setTimes((prev) => prev + 1);
+    setCount((prev) => prev + 1);
     setChating(true);
 
     setTimeout(() => {
@@ -37,7 +37,7 @@ export default function Backend() {
   return (
     <MainLayout backgroundImage="/images/prison/backend.png">
       <Show when={chating() && !finished()}>
-        <Chat message={MESSAGES[times()]} />
+        <Chat message={MESSAGES[count()]} />
       </Show>
       <Show when={!chating() && !finished()}>
         <Zimi message={zimiMessage()} onClick={quest} />
