@@ -4,12 +4,12 @@ export default function Crashed() {
       <img
         src="/images/prison/crashed.png"
         alt="/images/prison/crashed.png"
-        class="w-auto h-full"
+        class="max-w-max w-auto h-full"
       />
       <img
         src="/images/prison/crashed-message.gif"
         alt="/images/prison/crashed-message.gif"
-        class="absolute -top-[10%] left-0 w-auto h-auto"
+        class="absolute -top-[14%] left-0 w-auto h-auto"
       />
     </div>
   );

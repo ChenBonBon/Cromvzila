@@ -13,7 +13,7 @@ export default function Backend() {
   const [chating, setChating] = createSignal(false);
 
   const finished = createMemo(() => {
-    return times() === MESSAGES.length - 1;
+    return times() === MESSAGES.length;
   });
 
   function quest() {
@@ -22,12 +22,12 @@ export default function Backend() {
 
     setTimeout(() => {
       setChating(false);
-    }, 2000);
+    }, 3500);
   }
 
   return (
     <MainLayout backgroundImage="/images/prison/backend.png">
-      <Show when={chating()}>
+      <Show when={chating() && !finished()}>
         <Chat message={MESSAGES[times()]} />
       </Show>
       <Show when={!chating() && !finished()}>

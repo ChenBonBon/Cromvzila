@@ -10,8 +10,8 @@ export default function Zimi(props: ZimiProps) {
 
   onMount(() => {
     setTimeout(() => {
-      setMessage("......");
-    }, 2000);
+      setMessage("……………………");
+    }, 3500);
   });
 
   return (
