@@ -6,8 +6,6 @@ interface ClueCardProps {
 }
 
 export default function ClueCard(props: ClueCardProps) {
-  const { onClick } = props;
-
   const [hovered, setHovered] = createSignal(false);
 
   function handleMouseEnter() {
@@ -20,8 +18,8 @@ export default function ClueCard(props: ClueCardProps) {
 
   return (
     <img
-      src="/images/home-file.png"
-      alt="/images/home-file.png"
+      src="/images/home/file.png"
+      alt="/images/home/file.png"
       class={clsx(
         "absolute w-1/5 right-1/4 z-30 bottom-0 -rotate-12 cursor-pointer transition-transform duration-300 ease-linear",
         {
@@ -31,7 +29,7 @@ export default function ClueCard(props: ClueCardProps) {
       )}
       onMouseEnter={handleMouseEnter}
       onMouseOut={handleMouseOut}
-      onClick={onClick}
+      onClick={props.onClick}
     />
   );
 }

@@ -5,8 +5,6 @@ interface BioProps {
 }
 
 export default function Bio(props: BioProps) {
-  const { onClose } = props;
-
   let containerRef: HTMLDivElement;
   let backendRef: HTMLImageElement;
 
@@ -61,13 +59,13 @@ export default function Bio(props: BioProps) {
 
   return (
     <div
-      class="absolute top-0 left-0 w-full h-full"
+      class="absolute top-0 left-0 w-full h-full z-40"
       ref={(el) => (containerRef = el)}
     >
       <img
-        src="/images/bio-backend.png"
-        alt="/images/bio-backend.png"
-        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-full z-40"
+        src="/images/bio/backend.png"
+        alt="/images/bio/backend.png"
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-full"
         ref={(el) => (backendRef = el)}
         onLoad={(event) => {
           const currentTarget = event.currentTarget;
@@ -80,9 +78,9 @@ export default function Bio(props: BioProps) {
         }}
       />
       <img
-        src="/images/bio-photo.png"
-        alt="/images/bio-photo.png"
-        class="absolute h-1/2 z-40"
+        src="/images/bio/photo.png"
+        alt="/images/bio/photo.png"
+        class="absolute h-1/2"
         style={{
           left:
             (containerSize().width - backendSize().width) / 2 -
@@ -92,9 +90,9 @@ export default function Bio(props: BioProps) {
         }}
       />
       <img
-        src="/images/bio-mark.png"
-        alt="/images/bio-mark.png"
-        class="absolute h-1/5 z-40 cursor-pointer"
+        src="/images/bio/mark.png"
+        alt="/images/bio/mark.png"
+        class="absolute h-1/5 cursor-pointer"
         style={{
           right:
             (containerSize().width - backendSize().width) / 2 +
@@ -105,7 +103,7 @@ export default function Bio(props: BioProps) {
             backendSize().height / 8 +
             "px",
         }}
-        onClick={onClose}
+        onClick={props.onClose}
       />
     </div>
   );

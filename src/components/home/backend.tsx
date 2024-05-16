@@ -3,11 +3,11 @@ import { Show, createSignal } from "solid-js";
 import Mask from "../mask";
 import Bio from "./bio";
 import ClueCard from "./clue-card";
+import Frontend from "./frontend";
 import Nav from "./nav";
-import Prison from "./prison";
 import Wall from "./wall";
 
-const BackendComponent = clientOnly(() => import("./backend-component"));
+const MainLayout = clientOnly(() => import("../../layouts/main"));
 
 export default function Backend() {
   const [bioVisible, setBioVisible] = createSignal(false);
@@ -24,9 +24,9 @@ export default function Backend() {
   }
 
   return (
-    <BackendComponent>
+    <MainLayout backgroundImage="/images/home/backend.png">
       <Nav />
-      <Prison />
+      <Frontend />
       <Wall />
       <Show when={bioVisible()}>
         <Bio onClose={hideBio} />
@@ -37,6 +37,6 @@ export default function Backend() {
       <Show when={maskVisible()}>
         <Mask onClick={hideBio} />
       </Show>
-    </BackendComponent>
+    </MainLayout>
   );
 }

@@ -8,11 +8,9 @@ interface NavCardProps {
 }
 
 export default function NavCard(props: NavCardProps) {
-  const { href, children, className } = props;
-
   return (
-    <A href={href}>
-      <div class={className}>{children}</div>
+    <A href={props.href}>
+      <div class={props.className}>{props.children}</div>
     </A>
   );
 }

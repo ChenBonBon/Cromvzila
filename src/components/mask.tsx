@@ -6,15 +6,13 @@ interface MaskProps {
 }
 
 export default function Mask(props: MaskProps) {
-  const { className, onClick } = props;
-
   return (
     <div
       class={clsx(
         "absolute top-0 left-0 w-full h-full bg-black opacity-50 z-30",
-        className
+        props.className
       )}
-      onClick={onClick}
+      onClick={props.onClick}
     ></div>
   );
 }

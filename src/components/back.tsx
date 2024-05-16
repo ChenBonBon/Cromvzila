@@ -1,8 +1,12 @@
 import { A } from "@solidjs/router";
 
-export default function Back() {
+interface BackProps {
+  className?: string;
+}
+
+export default function Back(props: BackProps) {
   return (
-    <A href="/">
+    <A href="/" class={props.className}>
       <div>Back</div>
     </A>
   );

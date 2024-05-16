@@ -3,8 +3,11 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        chat: "SimHei, Microsoft JhengHei, STHeiti, LiHei Pro Medium",
+      },
       backgroundImage: {
-        "bio-backend": "url(/images/bio-backend.png)",
+        "prison-backend": "url(/images/prison/backend.png)",
       },
       animation: {
         dot: "dot 1.5s infinite",

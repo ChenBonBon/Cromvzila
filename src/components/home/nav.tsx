@@ -13,8 +13,8 @@ export default function Nav() {
   }
   return (
     <img
-      src="/images/home-nav.png"
-      alt="/images/home-nav.png"
+      src="/images/home/nav.png"
+      alt="/images/home/nav.png"
       class={clsx(
         "absolute top-0 left-0 h-1/2 z-30 transition-transform duration-300 ease-linear",
         {
