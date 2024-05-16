@@ -36,7 +36,7 @@ export default function Backend() {
       <Show when={finished()}>
         <Crashed />
       </Show>
-      <Back className="absolute bottom-0 right-0 text-white" />
+      <Back className="absolute bottom-[4.5%] right-[1.5%] text-white w-[8%]" />
     </MainLayout>
   );
 }
