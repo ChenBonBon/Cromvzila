@@ -36,15 +36,11 @@ export default function Backend() {
 
   return (
     <MainLayout backgroundImage="/images/prison/backend.webp">
-      <Show when={chating() && !finished()}>
-        <Chat message={MESSAGES[count()]} />
-      </Show>
+      <Chat message={MESSAGES[count()]} show={chating() && !finished()} />
       <Show when={!chating() && !finished()}>
         <Zimi message={zimiMessage()} onClick={quest} />
       </Show>
-      <Show when={finished()}>
-        <Crashed />
-      </Show>
+        <Crashed show={finished()} />
       <Back className="absolute bottom-[4.5%] right-[1.5%] text-white w-[8%]" />
     </MainLayout>
   );

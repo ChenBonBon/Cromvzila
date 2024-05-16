@@ -1,6 +1,17 @@
-export default function Crashed() {
+import clsx from "clsx";
+
+interface CrashedProps {
+  show?: boolean;
+}
+
+export default function Crashed(props: CrashedProps) {
   return (
-    <div class="absolute bottom-0 left-1/2 w-auto h-[90%] -translate-x-1/2">
+    <div
+      class={clsx(
+        "absolute bottom-0 left-1/2 w-auto h-[90%] -translate-x-1/2",
+        { ["hidden"]: !props.show }
+      )}
+    >
       <img
         src="/images/prison/crashed.webp"
         alt="/images/prison/crashed.webp"
