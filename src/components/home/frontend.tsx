@@ -10,8 +10,10 @@ export default function Frontend() {
       />
       <A
         href="/prison"
-        class="absolute top-[79%] left-[22%] w-[8%] h-[15%]"
-      ></A>
+        class="absolute top-[79%] left-[22%] w-[8%] h-[15%] text-transparent"
+      >
+        Prison
+      </A>
     </div>
   );
 }
