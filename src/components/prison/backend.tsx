@@ -1,5 +1,5 @@
 import { clientOnly } from "@solidjs/start";
-import { Show, createMemo, createSignal, onMount } from "solid-js";
+import { createMemo, createSignal, onMount } from "solid-js";
 import { MESSAGES } from "~/constants/Messages";
 import Back from "../back";
 import Chat from "./chat";
@@ -37,10 +37,12 @@ export default function Backend() {
   return (
     <MainLayout backgroundImage="/images/prison/backend.webp">
       <Chat message={MESSAGES[count()]} show={chating() && !finished()} />
-      <Show when={!chating() && !finished()}>
-        <Zimi message={zimiMessage()} onClick={quest} />
-      </Show>
-        <Crashed show={finished()} />
+      <Zimi
+        message={zimiMessage()}
+        show={!chating() && !finished()}
+        onClick={quest}
+      />
+      <Crashed show={finished()} />
       <Back className="absolute bottom-[4.5%] right-[1.5%] text-white w-[8%]" />
     </MainLayout>
   );
