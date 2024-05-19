@@ -4,10 +4,10 @@ export default function randomImages(count: number): string[] {
 
   for (let i = 0; i < count; i++) {
     const { prefix, ext, length } = getBucket();
-    let num = Math.floor(Math.random() * length);
+    let num = Math.ceil(Math.random() * length);
 
     while (generated.has(`${prefix}${num}${ext}`)) {
-      num = Math.floor(Math.random() * length);
+      num = Math.ceil(Math.random() * length);
     }
 
     generated.add(`${prefix}${num}${ext}`);
@@ -18,12 +18,12 @@ export default function randomImages(count: number): string[] {
 }
 
 function getBucket() {
-  const randomNumber = Math.floor(Math.random() * 100);
+  const randomNumber = Math.ceil(Math.random() * 100);
 
   if (randomNumber < 95) {
     return { prefix: "animals/animal-", ext: ".webp", length: 108 };
   } else {
-    const randomNumber = Math.floor(Math.random() * 100);
+    const randomNumber = Math.ceil(Math.random() * 100);
     if (randomNumber < 50) {
       return { prefix: "no-animals/no-animal-", ext: ".webp", length: 24 };
     } else {
