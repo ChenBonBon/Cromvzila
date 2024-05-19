@@ -59,13 +59,13 @@ export default function Bio(props: BioProps) {
 
   return (
     <div
-      class="absolute top-0 left-0 w-full h-full z-40"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-full z-40"
       ref={(el) => (containerRef = el)}
     >
       <img
         src="/images/bio/backend.webp"
         alt="/images/bio/backend.webp"
-        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-full"
+        class="w-auto h-full"
         ref={(el) => (backendRef = el)}
         onLoad={(event) => {
           const currentTarget = event.currentTarget;
@@ -80,24 +80,16 @@ export default function Bio(props: BioProps) {
       <img
         src="/images/bio/photo.webp"
         alt="/images/bio/photo.webp"
-        class="absolute h-1/2"
+        class="absolute h-1/2 left-0"
         style={{
-          left:
-            (containerSize().width - backendSize().width) / 2 -
-            backendSize().width / 40 +
-            "px",
           top: (containerSize().height - backendSize().height) / 2 + "px",
         }}
       />
       <img
         src="/images/bio/mark.webp"
         alt="/images/bio/mark.webp"
-        class="absolute h-1/5 cursor-pointer"
+        class="absolute h-1/5 cursor-pointer right-[8%]"
         style={{
-          right:
-            (containerSize().width - backendSize().width) / 2 +
-            backendSize().width / 12 +
-            "px",
           bottom:
             (containerSize().height - backendSize().height) / 2 +
             backendSize().height / 8 +

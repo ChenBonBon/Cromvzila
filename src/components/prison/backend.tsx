@@ -43,7 +43,10 @@ export default function Backend() {
         onClick={quest}
       />
       <Crashed show={finished()} />
-      <Back className="absolute bottom-[4.5%] right-[1.5%] text-white w-[8%]" />
+      <Back
+        backgroundImage="/images/back.webp"
+        className="absolute bottom-[4.5%] right-[1.5%] text-white w-[8%]"
+      />
     </MainLayout>
   );
 }
