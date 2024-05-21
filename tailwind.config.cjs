@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         chat: "SimHei, Microsoft JhengHei, STHeiti, LiHei Pro Medium",
       },
+      backgroundImage: {
+        "my-project": "url(/images/my-projects/detail-backend.webp)",
+      },
       animation: {
         dot: "dot 1.5s infinite",
       },
