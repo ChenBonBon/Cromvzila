@@ -30,7 +30,7 @@ export default function Detail(props: DetailProps) {
             <img
               src="/images/my-projects/prev.webp"
               alt="/images/my-projects/prev.webp"
-              class="absolute left-0 bottom-0 cursor-pointer h-[15%]"
+              class="absolute left-0 bottom-0 cursor-pointer w-[5%] hover:w-[8%] transition-all duration-300 ease-linear"
               onClick={handlePrev}
             />
           </Show>
@@ -38,7 +38,7 @@ export default function Detail(props: DetailProps) {
             <img
               src="/images/my-projects/next.webp"
               alt="/images/my-projects/next.webp"
-              class="absolute right-0 bottom-0 cursor-pointer h-[15%]"
+              class="absolute right-0 bottom-0 cursor-pointer w-[5%] hover:w-[8%] transition-all duration-300 ease-linear"
               onClick={handleNext}
             />
           </Show>
@@ -49,7 +49,7 @@ export default function Detail(props: DetailProps) {
         <img
           src="/images/my-projects/back.webp"
           alt="/images/my-projects/back.webp"
-          class="absolute right-0 bottom-0 cursor-pointer h-[15%]"
+          class="absolute right-0 bottom-0 cursor-pointer w-[5%] hover:w-[8%] transition-all duration-300 ease-linear"
           onClick={props.onClose}
         />
       </Show>

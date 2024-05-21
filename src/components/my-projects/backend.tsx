@@ -103,8 +103,8 @@ export default function Backend() {
         <Mask />
       </Show>
       <Back
-        backgroundImage="/images/my-folio/back.webp"
-        className="absolute bottom-[2%] right-[1%] w-[8%]"
+        backgroundImage="/images/my-projects/back.webp"
+        className="absolute bottom-0 right-0 w-[5%] hover:w-[8%] transition-all duration-300 ease-linear"
       />
     </MainLayout>
   );

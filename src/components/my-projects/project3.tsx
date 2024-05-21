@@ -24,7 +24,7 @@ export default function Project3() {
         class={clsx(
           "absolute top-0 right-0 h-full cursor-pointer transition-transform duration-300 ease-linear",
           {
-            ["translate-x-0 scale-100"]: hovered(),
+            ["translate-x-0 scale-[115%]"]: hovered(),
             ["translate-x-1/2 scale-50"]: !hovered(),
           }
         )}
