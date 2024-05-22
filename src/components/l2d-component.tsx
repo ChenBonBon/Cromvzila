@@ -5,19 +5,41 @@ const oml2d = loadOml2d({
   mobileDisplay: true,
   models: [
     {
-      path: "https://model.oml2d.com/HK416-1-normal/model.json",
-      position: [0, 150],
+      path: "/l2d/prison-guard-meow.model3.json",
+      position: [25, 150],
       scale: 0.06,
-      mobilePosition: [0, 175],
+      mobilePosition: [20, 175],
       mobileScale: 0.04,
       stageStyle: {
-        height: 450,
+        width: 200,
+        height: 400,
       },
       mobileStageStyle: {
-        height: 375,
+        width: 175,
+        height: 350,
       },
     },
   ],
+  tips: {
+    copyTips: {
+      message: ["Welcome to ZilaZila Prison, everyone says it's great here."],
+    },
+    idleTips: {
+      message: ["Make yourself at home, haha."],
+    },
+    welcomeTips: {
+      message: {
+        weeHours: "Hurry up and sleep, be careful of sudden death.",
+        daybreak: "Good morning, leader.",
+        morning: "I want breakfast.",
+        noon: "I want lunch.",
+        afternoon: "I want afternoon tea.",
+        dusk: "I want dinner.",
+        night: "The prison is my home, no overtime pay.Meow.",
+        lateNight: "I want midnight snack.",
+      },
+    },
+  },
 });
 
 export default function L2DComponent() {
