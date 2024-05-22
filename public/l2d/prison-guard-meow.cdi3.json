@@ -27,12 +27,12 @@
 			"Name": "右眼开闭"
 		},
 		{
-			"Id": "ParamEyeBallX2",
+			"Id": "ParamEyeBallX",
 			"GroupId": "",
 			"Name": "眼珠 X"
 		},
 		{
-			"Id": "ParamEyeBallY2",
+			"Id": "ParamEyeBallY",
 			"GroupId": "",
 			"Name": "眼珠 Y"
 		},

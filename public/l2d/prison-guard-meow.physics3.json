@@ -77,7 +77,7 @@
 					"Scale": 3.496,
 					"Weight": 100,
 					"Type": "Angle",
-					"Reflect": false
+					"Reflect": true
 				},
 				{
 					"Destination": {

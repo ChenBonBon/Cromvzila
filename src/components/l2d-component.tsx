@@ -25,7 +25,17 @@ const oml2d = loadOml2d({
       message: ["Welcome to ZilaZila Prison, everyone says it's great here."],
     },
     idleTips: {
-      message: ["Make yourself at home, haha."],
+      message: [
+        "Make yourself at home, meow.",
+        "Anywhere that moves can be clicked, meow.",
+        "Everything is normal in the prison, meow.",
+        "Where is my canned food, meow.",
+        "ZilaZila Prison is Zilala's masterpiece, meow.",
+        "No escaped prisoners found, meow.",
+        "Dutifully on guard, meow.",
+        "Patrolling, meow.",
+        "Hello, leader, meow.",
+      ],
     },
     welcomeTips: {
       message: {
