@@ -11,6 +11,7 @@ module.exports = {
       },
       animation: {
         dot: "dot 1.5s infinite",
+        landscape: "landscape 1.5s ease infinite alternate",
       },
       keyframes: {
         dot: {
@@ -22,6 +23,20 @@ module.exports = {
           },
           "100%": {
             opacity: 0,
+          },
+        },
+        landscape: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "30%": {
+            transform: "rotate(0deg)",
+          },
+          "70%": {
+            transform: "rotate(90deg)",
+          },
+          "100%": {
+            transform: "rotate(90deg)",
           },
         },
       },

@@ -8,6 +8,7 @@ import Nav from "./nav";
 import Wall from "./wall";
 
 const MainLayout = clientOnly(() => import("../../layouts/main"));
+const L2DComponent = clientOnly(() => import("../l2d-component"));
 
 export default function Backend() {
   const [bioVisible, setBioVisible] = createSignal(false);
@@ -25,6 +26,7 @@ export default function Backend() {
 
   return (
     <MainLayout backgroundImage="/images/home/backend.webp">
+      <L2DComponent />
       <Nav />
       <Frontend />
       <Wall />
