@@ -54,7 +54,7 @@ const projects = [
   },
   {
     src: "/images/my-projects/my-project-5.webp",
-    images: [],
+    images: ["/images/my-projects/my-project-5/1.webp"],
     position: {
       x: 82,
       y: 28,

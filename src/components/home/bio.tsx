@@ -1,7 +1,7 @@
 import { createSignal, onCleanup, onMount } from "solid-js";
 
 interface BioProps {
-  onClose?: () => void;
+  onClickEasterEgg?: () => void;
 }
 
 export default function Bio(props: BioProps) {
@@ -80,10 +80,11 @@ export default function Bio(props: BioProps) {
       <img
         src="/images/bio/photo.webp"
         alt="/images/bio/photo.webp"
-        class="absolute h-1/2 left-0"
+        class="absolute h-1/4 left-0 cursor-pointer"
         style={{
           top: (containerSize().height - backendSize().height) / 2 + "px",
         }}
+        onClick={props.onClickEasterEgg}
       />
       <img
         src="/images/bio/mark.webp"
@@ -95,7 +96,6 @@ export default function Bio(props: BioProps) {
             backendSize().height / 8 +
             "px",
         }}
-        onClick={props.onClose}
       />
     </div>
   );

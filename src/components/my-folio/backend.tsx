@@ -65,6 +65,10 @@ export default function Backend() {
     setSelectedFolio(null);
   }
 
+  function refreshFolios() {
+    setImages(randomImages(8));
+  }
+
   onMount(() => {
     setTimeout(() => {
       if (rulesVisible()) {
@@ -77,7 +81,7 @@ export default function Backend() {
 
   return (
     <MainLayout backgroundImage="/images/my-folio/backend.webp">
-      <REC />
+      <REC onClick={refreshFolios} />
       <Show when={rulesVisible()}>
         <Rules onClick={hideRules} />
       </Show>

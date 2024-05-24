@@ -1,11 +1,4 @@
-import {
-  JSX,
-  Show,
-  createEffect,
-  createSignal,
-  onCleanup,
-  onMount,
-} from "solid-js";
+import { JSX, Show, createSignal, onCleanup, onMount } from "solid-js";
 import useOrientation from "~/hooks/useOrientation";
 
 interface BackendProps {
@@ -42,10 +35,6 @@ export default function MainLayout(props: BackendProps) {
 
   onCleanup(() => {
     window.removeEventListener("resize", conputeSize);
-  });
-
-  createEffect(() => {
-    console.log(orientation());
   });
 
   return (

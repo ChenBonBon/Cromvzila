@@ -1,7 +1,8 @@
 import { clientOnly } from "@solidjs/start";
-import { createMemo, createSignal, onMount } from "solid-js";
+import { Show, createMemo, createSignal, onMount } from "solid-js";
 import { MESSAGES } from "~/constants/Messages";
 import Back from "../back";
+import EasterEgg from "../home/easter-egg";
 import Chat from "./chat";
 import Crashed from "./crashed";
 import Zimi from "./zimi";
@@ -14,6 +15,7 @@ export default function Backend() {
   const [zimiMessage, setZimiMessage] = createSignal(
     "MeowWoo, I'll say anything."
   );
+  const [easterEggVisible, setEasterEggVisible] = createSignal(false);
 
   const finished = createMemo(() => {
     return count() === MESSAGES.length;
@@ -26,6 +28,14 @@ export default function Backend() {
     setTimeout(() => {
       setChating(false);
     }, 3500);
+  }
+
+  function showEasterEgg() {
+    setEasterEggVisible(true);
+  }
+
+  function hideEasterEgg() {
+    setEasterEggVisible(false);
   }
 
   onMount(() => {
@@ -47,6 +57,13 @@ export default function Backend() {
         backgroundImage="/images/back.webp"
         className="absolute bottom-[4.5%] right-[1.5%] text-white w-[8%]"
       />
+      <div
+        class="absolute bottom-0 left-0 w-2/5 h-1/3 cursor-pointer"
+        onClick={showEasterEgg}
+      ></div>
+      <Show when={easterEggVisible()}>
+        <EasterEgg onClose={hideEasterEgg} />
+      </Show>
     </MainLayout>
   );
 }
