@@ -1,3 +1,4 @@
+import { A } from "@solidjs/router";
 import { createSignal, onMount } from "solid-js";
 
 interface EasterEggProps {
@@ -32,21 +33,31 @@ export default function EasterEgg(props: EasterEggProps) {
         alt="/images/easter-egg/zimiao.webp"
         class="absolute bottom-[15%] left-[3%] h-[15%]"
       />
-      <img
-        src="/images/easter-egg/ig.webp"
-        alt="/images/easter-egg/ig.webp"
-        class="absolute bottom-[27%] left-[14%] h-[6%]"
-      />
-      <img
-        src="/images/easter-egg/tiktok.webp"
-        alt="/images/easter-egg/tiktok.webp"
-        class="absolute bottom-[15%] left-[14%] h-[6%]"
-      />
+      <A href="https://www.instagram.com/cromvzilala" target="_blank">
+        <img
+          src="/images/easter-egg/ig.webp"
+          alt="/images/easter-egg/ig.webp"
+          class="absolute bottom-[27%] left-[14%] h-[6%]"
+        />
+      </A>
+      <A href="https://www.tiktok.com/@cromvzila" target="_blank">
+        <img
+          src="/images/easter-egg/tiktok.webp"
+          alt="/images/easter-egg/tiktok.webp"
+          class="absolute bottom-[15%] left-[14%] h-[6%]"
+        />
+      </A>
       <img
         src="/images/easter-egg/zimi.webp"
         alt="/images/easter-egg/zimi.webp"
         class="absolute bottom-[15%] left-[33%] h-1/5"
       />
+      <A
+        href="mailto:cromvzila@gmail.com"
+        class="absolute bottom-[30%] left-[40%] text-xs"
+      >
+        cromvzila@gmail.com
+      </A>
       <img
         src="/images/easter-egg/grass.webp"
         alt="/images/easter-egg/grass.webp"
