@@ -1,24 +1,34 @@
 import { createSignal, onCleanup, onMount } from "solid-js";
 
 export default function useOrientation() {
+  const landscapeQuery = window.matchMedia("(orientation: landscape)");
+
   const [orientation, setOrientation] = createSignal("portrait");
 
-  function getOrientation() {
-    if (screen.orientation.type === "landscape-primary") {
+  function checkOrientation() {
+    if (landscapeQuery.matches) {
       setOrientation("landscape");
-    } else if (screen.orientation.type === "portrait-primary") {
+    } else {
+      setOrientation("portrait");
+    }
+  }
+
+  function handleOrientationChange(mediaQuery: MediaQueryListEvent) {
+    if (mediaQuery.matches) {
+      setOrientation("landscape");
+    } else {
       setOrientation("portrait");
     }
   }
 
   onMount(() => {
-    getOrientation();
+    checkOrientation();
 
-    window.addEventListener("orientationchange", getOrientation);
+    landscapeQuery.addEventListener("change", handleOrientationChange);
   });
 
   onCleanup(() => {
-    window.removeEventListener("orientationchange", getOrientation);
+    landscapeQuery.removeEventListener("change", handleOrientationChange);
   });
 
   return { orientation };
