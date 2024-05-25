@@ -80,7 +80,7 @@ export default function Bio(props: BioProps) {
       <img
         src="/images/bio/photo.webp"
         alt="/images/bio/photo.webp"
-        class="absolute h-1/4 left-0 cursor-pointer"
+        class="absolute h-1/2 left-0 cursor-pointer"
         style={{
           top: (containerSize().height - backendSize().height) / 2 + "px",
         }}
@@ -89,7 +89,7 @@ export default function Bio(props: BioProps) {
       <img
         src="/images/bio/mark.webp"
         alt="/images/bio/mark.webp"
-        class="absolute h-1/5 cursor-pointer right-[8%]"
+        class="absolute h-1/5 cursor-pointer right-[8%] opacity-50"
         style={{
           bottom:
             (containerSize().height - backendSize().height) / 2 +
